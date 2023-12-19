@@ -20,7 +20,6 @@ public class UDP
     private InetAddress ipAddress = null;
     private InetAddress myIPAddress = null;
     private int portNo = -1;
-
     
     /**
      *  オブジェクトの状態を表すフラグ．false：オブジェクトは正常に動作． true：オブジェクトでエラーが発生．
@@ -33,7 +32,6 @@ public class UDP
     public String   myHostname = null;
 
 
-
     /**
      * UDPオブジェクトのコンストラクタ．ソケットの作成は行わない．
      */
@@ -41,7 +39,6 @@ public class UDP
     {
         init();
     }
-
 
 
     /**
@@ -68,7 +65,6 @@ public class UDP
     }
 
 
-
     /**
      * UDPオブジェクトのサーバ用コンストラクタ．<br>
      * ポートをオープンする．
@@ -90,7 +86,6 @@ public class UDP
     }
     
 
-
     /**
      * UDPオブジェクトを初期化する．
      */
@@ -110,7 +105,6 @@ public class UDP
             myHostname = null;
         }
      }
-
 
 
     /**
@@ -137,7 +131,6 @@ public class UDP
     }
 
 
-
     /**
        * UDPでメッセージ（文字列）を送信する．メッセージの最後に "\r\n"を付加する．
        * @param mesg 送信するメッセージ
@@ -162,7 +155,6 @@ public class UDP
     }
 
 
-
     /**
        * UDPでデータ（バイナリ）を送信する．
        * @param data 送信するバイナリのバイト列
@@ -184,7 +176,6 @@ public class UDP
             throw new Exception("TCP.sendData: Send Byte Data Error.");
         }
     }
-
 
 
     /**
@@ -219,7 +210,6 @@ public class UDP
         }
         else return null;        
     }
-
 
 
     /**
@@ -258,7 +248,6 @@ public class UDP
     }
 
 
-
     /**
      * UDPソケットのクローズと初期化
      */
@@ -276,7 +265,6 @@ public class UDP
             errFlag = true;
         }
     }
-      
 
 
     protected void finalize()

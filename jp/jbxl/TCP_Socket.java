@@ -1,6 +1,5 @@
 package jp.jbxl; 
 
-
 import java.net.*;
 import java.io.*;
 
@@ -14,15 +13,15 @@ public class TCP_Socket
 {
     private final static int  BUFSIZE = 1024;
 
-    private InputStream       inpStrm;        	// 入力ストリーム
-    private OutputStream      outStrm;        	// 出力ストリーム
-    private DataInputStream   dataInpStrm;    	// 入力バイトストリーム
-    private DataOutputStream  dataOutStrm;    	// 出力バイトストリーム
-    private InputStreamReader inpReader;      	// 入力バイトストリームのストリング化
-    private BufferedReader    bufReader;      	// 入力ストリングのバッファー化
-    private String  encoding = "UTF-8";			// 取り扱う文字セット（charset）
+    private InputStream       inpStrm;      // 入力ストリーム
+    private OutputStream      outStrm;      // 出力ストリーム
+    private DataInputStream   dataInpStrm;  // 入力バイトストリーム
+    private DataOutputStream  dataOutStrm;  // 出力バイトストリーム
+    private InputStreamReader inpReader;    // 入力バイトストリームのストリング化
+    private BufferedReader    bufReader;    // 入力ストリングのバッファー化
+    private String  encoding = "UTF-8";     // 取り扱う文字セット（charset）
 
-    protected Socket sock = null;             	// クライアントソケット
+    protected Socket sock = null;           // クライアントソケット
 
     /**
      * オブジェクトの状態を表すフラグ．true：オブジェクトは正常に動作． false：オブジェクトでエラーが発生．
@@ -39,12 +38,10 @@ public class TCP_Socket
      */
     public String      myHostname = null;
 
-
     /**
      * 受信したデータの長さ
      */
     public int         recvLen = 0;
-
 
 
     /**
@@ -55,7 +52,6 @@ public class TCP_Socket
     {
         init();
     }
-
 
 
     /**
@@ -77,7 +73,6 @@ public class TCP_Socket
             errFlag = true;
         }
     }
-
 
 
     /**
@@ -103,7 +98,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * 外部で作成した Socketを使用して TCP_Socketオブジェクトを作成する．<br>
      * TCP_Serverクラス からの使用を想定．<br>
@@ -124,7 +118,6 @@ public class TCP_Socket
             errFlag = true;
         }
     }
-
 
 
     /**
@@ -151,7 +144,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * サーバポートへのコネクトを行う．
      * @param server_host サーバ名
@@ -175,7 +167,6 @@ public class TCP_Socket
     }
 
 
-
     private void  createStream(Socket socket) throws Exception
     { 
         inpStrm = socket.getInputStream();
@@ -185,7 +176,6 @@ public class TCP_Socket
         inpReader = new InputStreamReader(inpStrm, encoding);
         bufReader = new BufferedReader(inpReader);
     }
-
 
 
     /**
@@ -209,7 +199,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * TCP_Socketでメッセージ（文字列）を送信する．
      * @param mesg 送信するメッセージ
@@ -229,7 +218,6 @@ public class TCP_Socket
             throw new Exception("TCP_Socket.sendMesg: Send Message Error.");
         }
     }
-
 
 
     /**
@@ -253,7 +241,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * TCP_Socketでデータ（バイナリ）を送信する．
      * @param data 送信するバイナリのバイト列
@@ -274,7 +261,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * TCP_Socketでメッセージ（文字列）を受信する．タイムアウトは 5s．<br>
      * 正常に受信した場合，recvLen に受信したデータのバイト数が入る．
@@ -285,7 +271,6 @@ public class TCP_Socket
     {
         return recvMesg(5000);
     }
-
 
 
     /**
@@ -321,7 +306,6 @@ public class TCP_Socket
     }
 
 
-
     /**
      * TCP_Socketでデータ（バイナリ）を受信する．タイムアウトは 5s．<br>
      * 正常に受信した場合，recvLen に受信したデータのバイト数が入る．
@@ -332,7 +316,6 @@ public class TCP_Socket
     {
         return recvData(5000);
     }
-
 
 
     /**
@@ -371,7 +354,6 @@ public class TCP_Socket
         }
         return retbuf;
     }
-
 
 
     /**

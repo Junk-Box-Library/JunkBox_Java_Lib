@@ -154,9 +154,9 @@ public class Crypt
     }
 
 
-/*
- * UNIX crypt function.
- */
+    /*
+    * UNIX crypt function.
+    */
     public String crypt(String key, String salt)
     {
         int sz = 8;
@@ -171,9 +171,9 @@ public class Crypt
     }
 
 
-/*
- * UNIX encrypt function.
- */
+    /*
+    * UNIX encrypt function.
+    */
     public byte[] encrypt(byte[] buf, int mode)
     {
         int i, l1, l2, r1, r2, mi=64;
@@ -259,11 +259,9 @@ public class Crypt
         return cry;
     }
 
-
-
-/*
- * UNIX setkey function.
- */
+    /*
+    * UNIX setkey function.
+    */
     public void setkey(byte[] key)
     {
         int i, j, mi=64;
@@ -299,7 +297,6 @@ public class Crypt
         for(i=0; i<8; i++) key[i] >>>= 1;
         ufc_mk_keytab(key);
     }
-
 
 
     public void setkey_byAscii(String buf)

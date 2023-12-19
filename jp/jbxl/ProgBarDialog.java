@@ -12,7 +12,6 @@ import java.awt.Toolkit;
 import javax.swing.JDialog;
 import javax.swing.JProgressBar;
 import javax.swing.JTextArea;
- 
 
 
 /**
@@ -48,7 +47,7 @@ public class ProgBarDialog extends JDialog
      */
     public  JTextArea mesgText  = null;
     
-    
+
     /**
      * デフォルトコンストラクタ
      */
@@ -57,7 +56,6 @@ public class ProgBarDialog extends JDialog
         super();
         initialize();
     }
-
 
 
     /**
@@ -81,7 +79,6 @@ public class ProgBarDialog extends JDialog
         }
     }
 
-
     
     /**
      * コンストラクタ．
@@ -94,7 +91,6 @@ public class ProgBarDialog extends JDialog
         this(null, title, min, max);
     }
 
-
     
     /**
      * コンストラクタ．バーの目盛の最小値は 0となる．
@@ -105,7 +101,6 @@ public class ProgBarDialog extends JDialog
     {
         this(null, title, 0, max);
     }
-    
 
 
     /**
@@ -118,7 +113,6 @@ public class ProgBarDialog extends JDialog
         this.setLocation((ScrnSize.width-dlogSize.width)/2, (ScrnSize.height-dlogSize.height)/2);
         this.setVisible(true);
     }
-    
         
     
     private void initialize()
@@ -131,7 +125,6 @@ public class ProgBarDialog extends JDialog
     }
 
     
-
     private javax.swing.JPanel getJContentPane()
     {
         if(jContentPane == null) {
@@ -143,7 +136,6 @@ public class ProgBarDialog extends JDialog
         return jContentPane;
     }
 
-        
 
     private JProgressBar getPrgBar()
     {
@@ -156,7 +148,6 @@ public class ProgBarDialog extends JDialog
         return prgBar;
     }
 
-
     
     private JTextArea getMesg_Text()
     {
@@ -168,5 +159,4 @@ public class ProgBarDialog extends JDialog
         return mesgText;
     }
  
-
 }  //  @jve:decl-index=0:visual-constraint="10,10"

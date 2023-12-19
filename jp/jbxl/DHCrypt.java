@@ -14,7 +14,6 @@ import javax.crypto.interfaces.*;
  */
 public class  DHCrypt
 {
-
     private KeyPairGenerator myKeyPairGen;
     private KeyFactory       myKeyFac;
     private KeyPair          myKeyPair;
@@ -49,7 +48,6 @@ public class  DHCrypt
             e.printStackTrace();
         }
     }
-
 
 
     /**
@@ -92,7 +90,6 @@ public class  DHCrypt
         return myPubKey;
     }     
       
-      
 
     /**
      * DES(ECB) での暗号化．テスト用．<br>
@@ -122,5 +119,4 @@ public class  DHCrypt
     }
 
 }
-
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+HLIST=`find . -name "*.java"`
+for FL in $HLIST; do
+    nkf  --oc=UTF-8 $FL > $FL.tmp
+    mv $FL.tmp $FL
+done

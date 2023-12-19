@@ -10,8 +10,6 @@ import java.util.*;
  * @version 1.0
  * 
  */
-
-
 public class Tools
 {
     private static String Ascii   = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -37,7 +35,6 @@ public class Tools
     }
 
 
-
     /**
      * バイトをストリングに変換する
      * @param buf 変換するバイト列
@@ -47,7 +44,6 @@ public class Tools
     {
         return new String(buf);
     }
-
 
 
     /**
@@ -73,11 +69,10 @@ public class Tools
     }
 
     
-    
     /**
      * バイト列 buf（長さn）を HexのStringへ変換する．
-     * @param buf 変換するバイト列
-     * @param n 変換対象となる，バイトの先頭からの長さ（バイト）
+     * @param  buf 変換するバイト列
+     * @param  n 変換対象となる，バイトの先頭からの長さ（バイト）
      * @return Hex表示の文字列
      */
     public static String byteArray2Hex(byte[] buf, int n)
@@ -98,7 +93,6 @@ public class Tools
     }
 
 
-
     /**
      * cc を区切り文字として n 番目の項目を戻す． nは 1から数える．
      * 
@@ -109,7 +103,7 @@ public class Tools
      */
     public static String  awk(String mesg, char cc, int n)
     {
-        int i=0, j;
+        int i = 0, j;
         char[] wrk = (mesg+cc).toCharArray();
         String ret = "";
 
@@ -129,7 +123,6 @@ public class Tools
     }
 
 
-
     /**
      * cc を区切り文字として n 番目の項目を戻す．ただし，連続した ccは一個の区切りとみなす．<br>
      * nは 1から数える．<br>
@@ -141,7 +134,7 @@ public class Tools
      */
     public static String  cawk(String mesg, char cc, int n)
     {
-        int i=0, j;
+        int i = 0, j;
         char[] wrk = (mesg+cc).toCharArray();
         String ret = "";
 
@@ -160,7 +153,6 @@ public class Tools
     }
 
 
-
     /**
      * cc を区切り文字として ret[] に可能な限りの項目を入れる．戻り値は入力された項目数．
      * 連続した ccは一個の区切りとみなす．
@@ -172,7 +164,7 @@ public class Tools
      */
     public static  int  get_allitem(String mesg, char cc, String[] ret)
     {
-        int i=0, j=0;
+        int i = 0, j = 0;
         char[] wrk = (mesg+cc).toCharArray();
         String str;
 
@@ -186,7 +178,6 @@ public class Tools
 
         return j;
     }
-
 
 
     /**

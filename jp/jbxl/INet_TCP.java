@@ -9,12 +9,10 @@ package jp.jbxl;
 import java.io.*;
 
 
-
 /**
  * INet Protocol を処理するためのTCPサブクラス 
  * @author Fumi.Iseki
  */
- 
 public class INet_TCP extends TCP_Socket
 {
     /**
@@ -39,7 +37,6 @@ public class INet_TCP extends TCP_Socket
     }
 
 
-
     /**
      * コンストラクタ．サーバへの connectも行う．
      * @param server_host サーバ名
@@ -50,7 +47,6 @@ public class INet_TCP extends TCP_Socket
         super(server_host, port);
         isConnect = !errFlag;
     }
-
 
 
     /**
@@ -70,7 +66,6 @@ public class INet_TCP extends TCP_Socket
 
         if (errFlag==false) isConnect = true;
     }
-
 
 
     /**
@@ -102,7 +97,6 @@ public class INet_TCP extends TCP_Socket
     }
 
 
-
     /**
      * サーバにコマンドを送って，"OK" の返答を待つ．
      * @param command サーバへ送るコマンド．
@@ -123,7 +117,6 @@ public class INet_TCP extends TCP_Socket
 
         return ret_no;
     }
-
 
 
     /**
@@ -155,7 +148,6 @@ public class INet_TCP extends TCP_Socket
         return ret_no;
     }
 
-
     
     /**
      * ソケットをクローズする
@@ -168,7 +160,6 @@ public class INet_TCP extends TCP_Socket
         }
     }
 
-    
     
     /**
      * 複数のファイルをサーバへ転送し，サーバからの返答を待つ<br>
@@ -183,7 +174,6 @@ public class INet_TCP extends TCP_Socket
         return sendFileRecvOK(files, false);
     }
 
-    
 
     /**
      * 複数のファイルをサーバへ転送し，サーバからの返答を待つ<br>
@@ -224,7 +214,6 @@ public class INet_TCP extends TCP_Socket
     }
 
 
-
     /**
      * ファイルを１つサーバへ転送し，サーバからの返答を待つ
      * 転送状況を示すプログレスバーは使用しない
@@ -237,7 +226,6 @@ public class INet_TCP extends TCP_Socket
     {
         return this.sendFileRecvOK(file, (ProgBarDialog)null);
     }
-
 
 
     /**
@@ -281,7 +269,6 @@ public class INet_TCP extends TCP_Socket
     }
 
     
-    
     /**
      * ファイルを１つサーバへ転送する．
      * 転送状況を示すプログレスバーは使用しない．
@@ -294,7 +281,6 @@ public class INet_TCP extends TCP_Socket
     {
         return this.sendFile(file, (ProgBarDialog)null);
     }
-
 
     
     /**
@@ -356,7 +342,6 @@ public class INet_TCP extends TCP_Socket
                 cnt = false;
             }
         }
-
         
         try {
             iFile.close();

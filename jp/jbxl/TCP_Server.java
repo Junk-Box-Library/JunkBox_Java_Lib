@@ -1,6 +1,5 @@
 package jp.jbxl;
 
-
 import java.net.*;
 
 
@@ -9,7 +8,6 @@ import java.net.*;
  * @author Fumi.Iseki
  * @version 1.0
  */
-
 public class TCP_Server
 {
     private ServerSocket serverSock = null; // サーバーソケット
@@ -21,7 +19,6 @@ public class TCP_Server
 
     public int connectMax = 50;
 
-
       
     /**
      * コンストラクタ．初期化のみ行なう．<br>
@@ -31,7 +28,6 @@ public class TCP_Server
     {
         init();
     }
-
       
 
     /**
@@ -54,7 +50,6 @@ public class TCP_Server
         }
     }
 
-
     
     /**
      * オブジェクトを生成し，TCPサーバソケットを作成する． <br>
@@ -76,7 +71,6 @@ public class TCP_Server
             errFlag = true;
         }
     }
-
 
 
     /**
@@ -103,7 +97,6 @@ public class TCP_Server
         }
     }
 
-    
 
     /**
      * すでにあるオブジェクトに対して，新しいTCPサーバソケットを作成（オープン）する<br>
@@ -129,7 +122,6 @@ public class TCP_Server
             throw new Exception("TCP_Server.open: Open Server Socket Faled.");
         }
     }
-
     
 
     /**
@@ -154,7 +146,6 @@ public class TCP_Server
         }
         return tcp;
     }
-
     
 
     /**
@@ -166,7 +157,6 @@ public class TCP_Server
         serverSock = null;
         errFlag = false;
     }
-
 
 
     /**
@@ -186,7 +176,6 @@ public class TCP_Server
             errFlag = true;
         }
     }
-      
 
 
     protected void finalize()

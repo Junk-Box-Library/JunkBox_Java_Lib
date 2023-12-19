@@ -1,7 +1,6 @@
 package jp.jbxl;
 
 
-
 /**
  * Base64 の符号化，復号化を行なう．
  * 
@@ -14,7 +13,6 @@ public class Base64
     private static String ascii = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
     //                             0123456789012345678901234567890123456789012345678901234567890123
 
-      
     /**
      * コンストラクタは使用しない
      * @deprecated 
@@ -23,8 +21,7 @@ public class Base64
     {
     }
       
-           
-      
+
     /**
      * バイトデータ dec を Base64の Stringに変換する．
      * @param dec Base64 に変換するバイト列
@@ -59,7 +56,6 @@ public class Base64
         }
         return enc;
     }
-
 
 
     /**

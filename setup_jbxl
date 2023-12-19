@@ -12,7 +12,7 @@ FL=`ls ${PKGNM}/*.java`
 
 for FN in $FL ; do
     echo $FN
-    javac $FN
+    javac -encoding UTF-8 $FN
 done
 
 jar -cvf JunkBox_Lib.jar ${PKGNM}/*.class
