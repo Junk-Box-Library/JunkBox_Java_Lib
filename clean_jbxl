@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PKGNM='jp/jbxl'
+
+rm -f ${PKGNM}/*.class
+rm -f ${PKGNM}/opt/*.class
+rm -f *.jar
+rm -f *.class
+rm -fr html/*
+

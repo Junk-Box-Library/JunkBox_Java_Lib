@@ -1,0 +1,20 @@
+#!/bin/bash
+
+PKGNM='jp/jbxl'
+
+rm -f ${PKGNM}/*.class
+rm -f ${PKGNM}/opt/*.class
+rm -f *.jar
+rm -fr html/*
+
+
+FL=`ls ${PKGNM}/*.java`
+
+for FN in $FL ; do
+    echo $FN
+    javac $FN
+done
+
+jar -cvf JunkBox_Lib.jar ${PKGNM}/*.class
+
+javadoc -d html ${PKGNM}/*.java -encoding "utf-8" -charset "utf-8"
