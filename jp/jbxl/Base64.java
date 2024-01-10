@@ -2,7 +2,7 @@ package jp.jbxl;
 
 
 /**
- * Base64 の符号化，復号化を行なう．
+ * Base64 の符号化，復号を行なう．
  * 
  * @author Fumi.Iseki
  * @version 1.0
